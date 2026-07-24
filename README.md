@@ -12,10 +12,11 @@ The pre-compiled binaries have been tested to work on the following platforms:
 
 - Windows 7, 8, 10, 11
 - Ubuntu 16.04, 18.04, 20.04, 22.04, 24.04
+- Fedora 40, 41
 
-Link to download the pre-compiled binary files: <https://github.com/cfgnunes/wxmp3gain/releases>
+Link to download the pre-compiled binary files: <https://github.com/JerryWeii-27/wxmp3gain/releases>
 
-On Linux, you can also install them via *Personal Package Archive (PPA)*:
+On Linux, you can also install them via *Personal Package Archive (PPA)* (Ubuntu only):
 
 ```sh
 sudo add-apt-repository -y ppa:cfgnunes/ppa
@@ -37,7 +38,7 @@ The prerequisites to build the source is to install the following packages:
 sudo apt-get -y install build-essential cmake gettext libwxgtk3.2-dev mp3gain
 ```
 
-Compile the sources and install the binaries, entering the following commands in the terminal:
+Compile the sources and install, entering the following commands in the terminal:
 
 ```sh
 mkdir build
@@ -45,6 +46,14 @@ cd build
 cmake ..
 cmake --build .
 sudo make install
+```
+
+#### Fedora
+
+The prerequisites to build the source is to install the following packages:
+
+```sh
+sudo dnf -y install cmake gettext mp3gain wxGTK-devel
 ```
 
 #### Windows
@@ -69,6 +78,10 @@ cmake --install .
 
 To create an installer on Windows, which is optional, the [Inno Setup](http://www.jrsoftware.org/isinfo.php) must to be downloaded and installed.
 To generate the installer setup, use file `installer.iss` in the Inno Setup after build the binaries.
+
+## What's different from the original
+
+- **Fixed runtime data path resolution on Linux** — the original hardcodes `/usr/share/wxmp3gain/data/` which breaks when installing to a custom prefix like `/usr/local`. This fork uses `wxStandardPaths::GetDataDir()` to resolve the path correctly regardless of install prefix.
 
 ## Contributing
 
