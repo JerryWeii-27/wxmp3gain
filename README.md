@@ -1,28 +1,10 @@
-# wxMP3gain - MP3 Volume Normalizer [![Actions Status](https://github.com/cfgnunes/wxmp3gain/workflows/build/badge.svg)](https://github.com/cfgnunes/wxmp3gain/actions)
+# wxMP3gain - MP3 Volume Normalizer [![Actions Status](https://github.com/JerryWeii-27/wxmp3gain/workflows/build/badge.svg)](https://github.com/JerryWeii-27/wxmp3gain/actions)
 
 wxMP3gain is a free front-end for the [MP3gain](https://mp3gain.sourceforge.net).
 
 ![screenshot](doc/screenshot.png)
 
 ## Getting Started
-
-### Install from binaries
-
-The pre-compiled binaries have been tested to work on the following platforms:
-
-- Windows 7, 8, 10, 11
-- Ubuntu 16.04, 18.04, 20.04, 22.04, 24.04
-- Fedora 40, 41
-
-Link to download the pre-compiled binary files: <https://github.com/JerryWeii-27/wxmp3gain/releases>
-
-On Linux, you can also install them via *Personal Package Archive (PPA)* (Ubuntu only):
-
-```sh
-sudo add-apt-repository -y ppa:cfgnunes/ppa
-sudo apt-get update
-sudo apt-get -y install wxmp3gain
-```
 
 ### Install from sources
 
